@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <chrono>
 
 #include "DyV.h"
 
@@ -27,8 +28,16 @@ int main(){
 	  std::cout << v3[i] << " ";
 	}
 	std::cout << std::endl;
+
+	auto start = std::chrono::system_clock::now();
 	
 	quickSort(v3, 0, tam3);
+
+	auto end = std::chrono::system_clock::now();
+
+	std::chrono::duration<float, std::milli> duration = end - start;
+
+	std::cout << "Tiempo: " << duration.count() << "s" << std::endl;
 
 	for(int i=0; i<=tam3; i++){
 	  std::cout << v3[i] << " ";
