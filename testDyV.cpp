@@ -29,27 +29,33 @@ int main(){
 	}
 	std::cout << std::endl;
 
-	auto start = std::chrono::system_clock::now();
+	auto start1 = std::chrono::system_clock::now();
 	quickSortInicial(v3, 0, tam3);
-	auto end = std::chrono::system_clock::now();
-	std::chrono::duration<float, std::milli> duration = end - start;
-	std::cout << "Tiempo: " << duration.count() << "s" << std::endl;
+	auto end1 = std::chrono::system_clock::now();
+	std::chrono::duration<float, std::milli> duration1 = end1 - start1;
+	std::cout << "Tiempo: " << duration1.count() << "s" << std::endl;
 
 	for(int i=0; i<=tam3; i++){
 	  std::cout << v3[i] << " ";
 	}
 	std::cout << std::endl;
 
-	for(int i=0; i<=tam3; i++){
-	  std::cout << v3[i] << " ";
-	}
-	std::cout << std::endl;
-
-	auto start = std::chrono::system_clock::now();
+	auto start2 = std::chrono::system_clock::now();
 	quickSortFinal(v3, 0, tam3);
-	auto end = std::chrono::system_clock::now();
-	std::chrono::duration<float, std::milli> duration = end - start;
-	std::cout << "Tiempo: " << duration.count() << "s" << std::endl;
+	auto end2 = std::chrono::system_clock::now();
+	std::chrono::duration<float, std::milli> duration2 = end2 - start2;
+	std::cout << "Tiempo: " << duration2.count() << "s" << std::endl;
+
+	for(int i=0; i<=tam3; i++){
+	  std::cout << v3[i] << " ";
+	}
+	std::cout << std::endl;
+
+	auto start3 = std::chrono::system_clock::now();
+	quickSortFinal(v3, 0, tam3);
+	auto end3 = std::chrono::system_clock::now();
+	std::chrono::duration<float, std::milli> duration3 = end3 - start3;
+	std::cout << "Tiempo: " << duration3.count() << "s" << std::endl;
 
 	for(int i=0; i<=tam3; i++){
 	  std::cout << v3[i] << " ";
